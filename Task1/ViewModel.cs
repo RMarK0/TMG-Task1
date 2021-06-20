@@ -11,11 +11,6 @@ using Newtonsoft.Json.Linq;
 
 namespace Task1
 {
-    /*
-     * Class, which contains most of the logic
-     * of the app. 
-     */
-
     static class ViewModelHelper
     {
         // List that contains incorrect IDs (< 1 && > 20)
@@ -258,7 +253,7 @@ namespace Task1
             }
 
             var matches = Regex.Matches(text,                                   // 
-                @"[\w']+", RegexOptions.CultureInvariant | RegexOptions.Multiline   // Counts words in input string with regex [\w']+
+                @"[\w'-]+", RegexOptions.CultureInvariant | RegexOptions.Multiline   // Counts words in input string with regex [\w']+
                                                          | RegexOptions.IgnoreCase);            //
             wordsCount = matches.Count;
 
